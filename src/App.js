@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Welcome to Nakatomi Corporation</h1>
       </header>
+      <main>
+        <h2>Upload CSV files here</h2>
+        <form action="/action_page.php">
+          <input type="file" id="myFile" name="filename" />
+          <input type="submit" />
+        </form>
+      </main>
     </div>
   );
 }
