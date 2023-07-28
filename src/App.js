@@ -30,9 +30,11 @@ function App({ signOut }) {
       </header>
       <Card>
         {/* <Image src={logo} className="App-logo" alt="logo" /> */}
-        <Heading level={1}>We now have Auth!</Heading>
+        {/* <Heading level={1}>We now have Auth!</Heading> */}
       </Card>
-      <Button onClick={signOut}>Sign Out</Button>
+      <div>
+        <Button id="signOut" onClick={signOut}>Sign Out</Button>
+      </div>
 
       <main>
         <h2>Upload CSV files here</h2>
