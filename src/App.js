@@ -16,10 +16,28 @@ function App({ signOut }) {
   const [fileStatus, setFileStatus] = useState(false);
 
   const uploadFile = async () => {
-    const result = await Storage.put(fileData.name, fileData, {
-      contentType: fileData.type,
-    });
-    setFileStatus(true);
+    const file = fileData;
+
+    if (!file) {
+      alert('Please select a file before uploading');
+      return;
+    }
+
+    if (file.type !== 'text/csv') {
+      alert('Only CSV files are allowed');
+      return;
+    }
+
+    try {
+      const result = await Storage.put(fileData.name, fileData, {
+        contentType: fileData.type,
+      });
+      setFileStatus(true);
+      console.log(21, result);
+    } catch (error) {
+      console.error('File upload error', error);
+    }
+    
     // console.log(21, result);
   }
   
