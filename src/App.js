@@ -44,7 +44,7 @@ function App({ signOut }) {
   return (
     <View className="App">
       <header>
-        <h1>Welcome to Nakatomi Corporation</h1>
+        <h1>Welcome to Nakatomi Corporation!</h1>
       </header>
       <Card>
         {/* <Image src={logo} className="App-logo" alt="logo" /> */}
